@@ -1,0 +1,98 @@
+.content {
+  position: auto;
+  color:red;
+  background: yellow;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  animation: slideIn 1s ease-out; 
+}
+.special {
+  position: auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex;
+  color: yellowgreen;
+  background: linear_gradient (135deg, blue, yellow) blue;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  animation: fadeSlide 1s ease-in ;
+}
+.button {
+  position: auto;
+  color: yellow;
+  background-color: black;
+  width: 60px; height: 10px; padding: 50px;
+  border: none; border-radius: 0px;
+  animation: fadeSlide 2s ease-in-out 500ms;
+}
+@media (max-width: 480px) {
+  .content {
+    display: block;
+    width: 70%;
+  }
+}@media  (max-width: 480px;) {
+  .button {
+    width: 10%;
+  }
+}
+@media (max-width: 768px) {
+  .content {
+    width: 50%;
+  }
+}
+
+@media (max-width: 1200px) {
+  .content {
+    max-width: 1200px;
+  }
+}
+h1 {
+  font-size: 10vw;
+}
+p {
+  height: 10vh;  /* full screen height */
+}
+.box {
+  width: 50%;     /* half the container */
+}
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+@keyframes slideOut {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+    scale: 1;
+  }
+  50% {
+    transform: translateY(-50px);
+    scale: 2;
+  }
+  100% {
+    transform: translateY(0);
+    scale: 1;
+  }
+}
+@keyframes fadeSlide {
+  from {
+    opacity: 0; 
+    transform: translateY(100px) rotate(315deg);
+  }
+  to {opacity: 1; 
+    transform: translateY(0px) rotate(45deg);
+  }
+}
